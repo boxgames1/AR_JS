@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<meta name='viewport' content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'>
+<!-- three.js library -->
+<!-- include aframe obviously -->
+<script src="aframe.min.js"></script>
+<!-- include ar.js for a-frame -->
+<script src="aframe-ar.js"></script>
+<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.12.4/dist/aframe-extras.min.js"></script>
+<body style='margin : 0px; overflow: hidden;'>
+  <a-scene embedded arjs='sourceType: webcam;'>
+    <a-marker preset='mmapa1'>
+      <a-entity obj-model="obj: #House_11_obj-obj" scale='0.01 0.01 0.01'></a-entity>
+    </a-marker>
+    <a-marker preset='b'>
+      <a-entity obj-model="obj: #245_House13_obj-obj" scale='0.001 0.001 0.001'></a-entity>
+    </a-marker>
+    <a-marker preset='c'>
+      <a-entity obj-model="obj: #bg3-obj; mtl: #bg3-mtl" scale='0.1 0.1 0.1'></a-entity>
+    </a-marker>
+    <a-marker preset='hiro'>
+      <a-entity obj-model="obj: #Avent-obj; mtl: #Avent-mtl" scale='0.5 0.5 0.5'></a-entity>
+    </a-marker>
+    <a-marker preset='numeros'>
+      <a-entity
+          collada-model="url(models/dae/LAKE.dae);"
+          scale='0.07 0.07 0.07'
+      >
+      </a-entity>
+    </a-marker>
+    <a-assets>
+      <a-asset-item id="garbage" src="../../models/ply/garbage.ply"></a-asset-item>
+      <a-asset-item id="bg3-obj" src="../../models/obj/bg3.obj"></a-asset-item>
+      <a-asset-item id="bg3-mtl" src="../../models/obj/bg3.mtl"></a-asset-item>
+      <a-asset-item id="House_11_obj-obj" src="../../models/obj/House_11_obj.obj"></a-asset-item>
+      <a-asset-item id="245_House13_obj-obj" src="../../models/obj/245_House13_obj.obj"></a-asset-item>
+      <a-asset-item id="Avent-obj" src="../../models/obj/Avent.obj"></a-asset-item>
+      <a-asset-item id="Avent-mtl" src="../../models/obj/Avent.mtl"></a-asset-item>
+    </a-assets>
+    <!-- Probar con gif, video y audio -->
+    <a-entity camera>
+    </a-entity>
+  </a-scene>
+
+</body>
+</html>

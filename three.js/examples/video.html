@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<meta name='viewport' content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'>
+<!-- three.js library -->
+<!-- include aframe obviously -->
+<script src="aframe.js"></script>
+<!-- include ar.js for a-frame -->
+<script src="aframe-ar.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<body style='margin : 0px; overflow: hidden;'>
+  <a-scene embedded arjs='sourceType: webcam;'>
+    <a-marker preset='hiro'>
+      <a-video id="inputVideo" src="tennessee.mp4" width="2" height="2"  muted playsinline position="0 0 0"></a-video>
+    </a-marker>
+    <a-entity camera>
+    </a-entity>
+  </a-scene>
+
+</body>
+</html>

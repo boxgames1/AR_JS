@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<meta name='viewport' content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'>
+<!-- three.js library -->
+<!-- include aframe obviously -->
+<script src="aframe.min.js"></script>
+<!-- include ar.js for a-frame -->
+<script src="aframe-ar.js"></script>
+<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.12.4/dist/aframe-extras.min.js"></script>
+<body style='margin : 0px; overflow: hidden;'>
+  <a-scene embedded arjs='sourceType: webcam;'>
+    <a-marker preset='a'>
+      <a-collada-model src="../../trice.dae"></a-collada-model>
+    </a-marker>
+    <a-marker preset='c'>
+      <a-collada-model src="../../coin.dae"></a-collada-model>
+    </a-marker>
+    <a-marker preset='b'>
+      <a-collada-model src="../../tetera.dae"></a-collada-model>
+    </a-marker>
+    <a-assets>
+      <a-asset-item id="assetAframe" src="models/ply/aframe.ply"></a-asset-item>
+    </a-assets>
+    <a-marker preset='hiro'>
+      <a-entity ply-model="src: #assetAframe" rotation='-90 0 0'scale='0.02 0.02 0.02'></a-entity>
+    </a-marker>
+    <a-marker preset='f'>
+      <a-collada-model src="../../free_car_1.dae"></a-collada-model>
+    </a-marker>
+    <!-- Probar con gif, video y audio -->
+    <a-entity camera>
+    </a-entity>
+  </a-scene>
+
+</body>
+</html>

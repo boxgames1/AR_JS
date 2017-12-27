@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<meta name='viewport' content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'>
+<!-- three.js library -->
+<!-- include aframe obviously -->
+<script src="aframe.min.js"></script>
+<!-- include ar.js for a-frame -->
+<script src="aframe-ar.js"></script>
+<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.12.4/dist/aframe-extras.min.js"></script>
+<body style='margin : 0px; overflow: hidden;'>
+  <a-scene embedded arjs='sourceType: webcam;'>
+    <a-marker preset='aaa'>
+      <a-entity ply-model="src: #stadiumAframe" rotation='-90 0 0'scale='0.02 0.02 0.02'></a-entity>
+    </a-marker>
+    <a-marker preset='aaa-fino'>
+      <a-entity ply-model="src: #pikachuAframe" rotation='-90 0 0'scale='0.02 0.02 0.02'></a-entity>
+    </a-marker>
+    <a-marker preset='qr4'>
+      <a-entity ply-model="src: #stadiumAframe" rotation='-90 0 0'scale='0.02 0.02 0.02'></a-entity>
+    </a-marker>
+    <a-marker preset='qr4-fino'>
+      <a-entity ply-model="src: #pikachuAframe" rotation='-90 0 0'scale='0.02 0.02 0.02'></a-entity>
+    </a-marker>
+
+
+    <a-marker preset='numeros'>
+      <a-entity obj-model="obj: #bg3-obj; mtl: #bg3-mtl" scale='0.1 0.1 0.1'></a-entity>
+    </a-marker>
+
+    <a-assets>
+      <a-asset-item id="pikachuAframe" src="models/ply/pikachu.ply"></a-asset-item>
+      <a-asset-item id="stadiumAframe" src="models/ply/stadium.ply"></a-asset-item>
+      <a-asset-item id="garbageAframe" src="models/ply/garbage.ply"></a-asset-item>
+      <a-asset-item id="obj-EB-112-obj" src="../../obj-EB-112.obj"></a-asset-item>
+      <a-asset-item id="obj-EB-112-mtl" src="models/obj/obj-EB-112.mtl"></a-asset-item>
+      <a-asset-item id="bg3-obj" src="../../bg3.obj"></a-asset-item>
+      <a-asset-item id="bg3-mtl" src="models/obj/bg3.mtl"></a-asset-item>
+    </a-assets>
+    <!-- Probar con gif, video y audio -->
+    <a-entity camera>
+    </a-entity>
+  </a-scene>
+
+</body>
+</html>
